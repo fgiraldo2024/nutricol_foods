@@ -1,5 +1,8 @@
 import os
 import smtplib
+import ssl
+from email.utils import formataddr
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 from dotenv import load_dotenv
 from email.mime.text import MIMEText
@@ -9,7 +12,7 @@ from email.mime.multipart import MIMEMultipart
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = "supersecretkey"  # Necesaria para flash messages
+app.secret_key = os.getenv("SECRET_KEY", "dev-secret-key-change-me")  # Necesaria para flash messages
 
 # Variables de entorno
 EMAIL_USER = os.getenv("EMAIL_USER")
@@ -53,28 +56,26 @@ def enviar():
     try:
         # Crear el correo
         msg = MIMEMultipart()
-        msg["From"] = EMAIL_USER
-        msg["To"] = EMAIL_TO
         msg["Subject"] = f"Nuevo mensaje de {nombre}"
+        msg["From"]    = formataddr(("Sitio Nutricol", EMAIL_USER))  # From = usuario SMTP
+        msg["To"]      = EMAIL_TO
+        if email:
+            msg["Reply-To"] = email
 
-        cuerpo = f"""
-        Nombre: {nombre}
-        Email: {email}
-        Mensaje: {mensaje}
-        """
+        cuerpo = f"Nombre: {nombre}\nEmail: {email}\n\nMensaje:\n{mensaje}"
+        msg.attach(MIMEText(cuerpo, "plain", "utf-8"))
 
-        msg.attach(MIMEText(cuerpo, "plain"))
-
-        # Conexión al servidor SMTP de GoDaddy
-        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-            server.starttls()
+        # Conexión TLS robusta (587)
+        context = ssl.create_default_context()
+        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=20) as server:
+            server.ehlo()
+            server.starttls(context=context)
+            server.ehlo()
             server.login(EMAIL_USER, EMAIL_PASS)
-            server.sendmail(EMAIL_USER, EMAIL_TO, msg.as_string())
+            server.sendmail(EMAIL_USER, [EMAIL_TO], msg.as_string())
 
         flash("✅ Tu mensaje ha sido enviado con éxito.", "success")
-    except Exception as e:
-        print("Error enviando correo:", e)
-        flash("❌ Hubo un error al enviar el mensaje. Intenta de nuevo.", "danger")
+
 
     return redirect(url_for("contacto"))
 
