@@ -17,35 +17,29 @@ app.secret_key = os.getenv("SECRET_KEY", "dev-secret-key-change-me")  # Necesari
 # Variables de entorno
 EMAIL_USER = os.getenv("EMAIL_USER")
 EMAIL_PASS = os.getenv("EMAIL_PASS")
-EMAIL_TO = os.getenv("EMAIL_TO")
+EMAIL_TO = os.getenv("EMAIL_TO") or EMAIL_USER  # <- si no hay EMAIL_TO, usa el remitente
 SMTP_SERVER = os.getenv("SMTP_SERVER")
 SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
-
 
 @app.route("/")
 def index():
     return render_template("index.html")
 
-
 @app.route("/nosotros")
 def nosotros():
     return render_template("nosotros.html")
-
 
 @app.route("/productos")
 def productos():
     return render_template("productos.html")
 
-
 @app.route("/mercados")
 def mercados():
     return render_template("mercados.html")
 
-
 @app.route("/contacto")
 def contacto():
     return render_template("contacto.html")
-
 
 @app.route("/enviar", methods=["POST"])
 def enviar():
@@ -75,10 +69,11 @@ def enviar():
             server.sendmail(EMAIL_USER, [EMAIL_TO], msg.as_string())
 
         flash("✅ Tu mensaje ha sido enviado con éxito.", "success")
-
+    except Exception as e:
+        print("Error enviando correo:", e)
+        flash("❌ Hubo un error al enviar el mensaje. Intenta de nuevo.", "danger")
 
     return redirect(url_for("contacto"))
-
 
 if __name__ == "__main__":
     app.run(debug=True)
