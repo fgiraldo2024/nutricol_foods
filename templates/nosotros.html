@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Nosotros - Nutricol Foods{% endblock %}
+
+{% block content %}
+  <div class="container my-5 text-center">
+
+    <!-- Logo arriba, centrado con título -->
+    <div class="text-center mb-4">
+      <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" 
+           alt="Logo Nutricol Foods" 
+           style="max-width: 180px; height: auto; margin-bottom: 15px;">
+      <h1 class="mb-0">Sobre Nosotros</h1>
+    </div>
+
+    <p class="lead mt-4">
+      Nutricol Foods nace con la misión de llevar lo mejor de la despensa colombiana a los mercados internacionales. 
+      Creemos que la comida es un puente que une culturas, despierta recuerdos y genera momentos de felicidad.
+    </p>
+
+    <p>
+      Nuestra filosofía se basa en tres pilares:
+      <br>✅ <strong>Calidad garantizada:</strong> Productos seleccionados desde su origen.
+      <br>🤝 <strong>Compromiso social:</strong> Apoyamos a productores locales y fomentamos el comercio justo.
+      <br>🌱 <strong>Innovación constante:</strong> Buscamos nuevos formatos y sabores para sorprenderte.
+    </p>
+
+    <p class="lead">
+      Desde nuestras raíces en Antioquia, trabajamos para que cada caja que enviamos sea como un regalo que viaja desde casa.
+    </p>
+
+  </div>
+{% endblock %}

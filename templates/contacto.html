@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Contacto - Nutricol Foods{% endblock %}
+
+{% block content %}
+  <div class="text-center my-5">
+
+    <!-- Logo arriba, centrado -->
+    <div class="text-center mb-4">
+      <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" 
+           alt="Logo Nutricol Foods" 
+           style="max-width: 180px; height: auto; margin-bottom: 15px;">
+      <h1 class="mb-0">Conectemos</h1>
+    </div>
+
+    <p class="lead">Queremos escucharte. Escríbenos para pedidos, distribución o más información.</p>
+
+    <!-- Bloque de mensajes flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <!-- Fin bloque de mensajes -->
+
+    <form action="{{ url_for('enviar') }}" method="POST" class="mx-auto mt-4" style="max-width: 500px;">
+      <div class="form-group text-left">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="form-group text-left">
+        <label for="email">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group text-left">
+        <label for="mensaje">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Enviar mensaje</button>
+    </form>
+
+    <div class="mt-4 mb-5">
+      <p>📱 WhatsApp: <a href="https://wa.me/573017357829" target="_blank" class="text-success">+57 301 735 7829</a></p>
+      <p>✉️ Email: <a href="mailto:comercial@nutricolfoods.com" class="text-success">comercial@nutricolfoods.com</a></p>
+    </div>
+  </div>
+{% endblock %}
