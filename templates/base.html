@@ -13,7 +13,8 @@
     <!-- Tus estilos propios -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <div class="container-fluid">
@@ -34,7 +35,7 @@
     </nav>
 
     <!-- Contenido principal -->
-    <main class="container my-5">
+    <main class="container mt-5 mb-0 flex-grow-1">
         {% block content %}{% endblock %}
     </main>
 
