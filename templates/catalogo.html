@@ -1,41 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Catálogo de Productos</title>
+{% extends "base.html" %}
+
+{% block title %}Catálogo de Productos - Nutricol Foods{% endblock %}
+
+{% block content %}
+  <div class="text-center my-5">
+
+    <!-- Logo arriba, centrado -->
+    <div class="text-center mb-4">
+      <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" 
+           alt="Logo Nutricol Foods" 
+           style="max-width: 180px; height: auto; margin-bottom: 15px;">
+      <h1 class="mb-0">Catálogo de Productos</h1>
+    </div>
+
+    <!-- Contenedor del catálogo -->
+    <main class="container">
+      <div id="catalogo" class="grid row g-4 justify-content-center"></div>
+    </main>
+
+  </div>
+
   <style>
-    :root { --verde:#2E8B57; --gris:#f6f6f6; }
-    body { font-family: Arial, Helvetica, sans-serif; margin:0; background:var(--gris); }
-    header { background: linear-gradient(135deg, var(--verde), #1c5d3b); color:#fff; padding: 1.2rem 2rem; }
-    header h1 { margin:0; font-size: 1.5rem; }
-    main { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
-    .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
-    .card { background:#fff; border-radius: 14px; box-shadow: 0 6px 14px rgba(0,0,0,.08); padding: 14px; text-align:center; transition: transform .2s ease; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background:#fff; border-radius:14px;
+      box-shadow:0 6px 14px rgba(0,0,0,.08);
+      padding:14px; text-align:center;
+      transition: transform .2s ease;
+    }
     .card:hover { transform: translateY(-4px); }
     .card img { width:100%; height:200px; object-fit: contain; }
-    .titulo { margin:10px 0 4px; font-weight: 700; }
-    .descripcion { font-size:.95rem; color:#333; min-height: 38px; }
-    .precio { margin-top: 8px; color: var(--verde); font-weight: 700; }
+    .titulo { margin:10px 0 4px; font-weight:700; }
+    .descripcion { font-size:.95rem; color:#333; min-height:38px; }
+    .precio { margin-top:8px; color:#2E8B57; font-weight:700; }
   </style>
-</head>
-<body>
-  <header><h1>Catálogo de Productos</h1></header>
-  <main>
-    <div id="catalogo" class="grid" aria-live="polite"></div>
-  </main>
 
   <script>
-    const jsonUrl = "static/data/catalogo.json";
-    const imgBase = "static/img/catalogo/"; // ruta termina en /
-  
+    const jsonUrl = "{{ url_for('static', filename='data/catalogo.json') }}";
+    const imgBase = "{{ url_for('static', filename='img/catalogo/') }}";
+
     async function cargarCatalogo(){
       try {
         const resp = await fetch(jsonUrl, {cache:'no-store'});
         const productos = await resp.json();
         const grid = document.getElementById('catalogo');
         grid.innerHTML = '';
-  
+
         productos.forEach(p => {
           const el = document.createElement('div');
           el.className = 'card';
@@ -54,6 +68,4 @@
     }
     cargarCatalogo();
   </script>
-  
-</body>
-</html>
+{% endblock %}
