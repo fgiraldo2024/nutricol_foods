@@ -1,0 +1,97 @@
+[
+  {
+    "titulo": "Aceite de Aguacate",
+    "descripcion": "Aceite puro de aguacate, 250 ml.",
+    "precio": "$18.000",
+    "imagen": "aceite_aguaca.jpg"
+  },
+  {
+    "titulo": "Mezcla Maizena Buñuelos",
+    "descripcion": "Caja 300 g. Mezcla especial para buñuelos.",
+    "precio": "$9.500",
+    "imagen": "buñuelos.jpg"
+  },
+  {
+    "titulo": "Café Cafetto",
+    "descripcion": "Café artesanal. Presentaciones 2.5 kg y 450 g.",
+    "precio": "$45.000",
+    "imagen": "cafetto_2_presentaciones.png"
+  },
+  {
+    "titulo": "Chips Monterojo Crema y Cebolla",
+    "descripcion": "Papas sabor crema y cebolla, 150 g.",
+    "precio": "$7.000",
+    "imagen": "chips_nutricol.jpg"
+
+  },
+  {
+    "titulo": "Mezcla Maizena Natilla",
+    "descripcion": "Caja 300 g. Mezcla especial para buñuelos",
+    "precio": "$7.000",
+    "imagen": "natilla.jpg"
+
+  },
+  {
+    "titulo": "CACAO AL 70%",
+    "descripcion": "Cacacao al 70%",
+    "precio": "$7.000",
+    "imagen": "chocolate_70.jpg"
+
+  },
+  {
+    "titulo": "Jugos Selvafresca",
+    "descripcion": "Jugos Selvafresca.....",
+    "precio": "$7.000",
+    "imagen": "jugos_selvafresca.jpg"
+
+  },
+  {
+    "titulo": "Leche de Coco",
+    "descripcion": "Leche de Coco.........",
+    "precio": "$7.000",
+    "imagen": "leche_coco.jpeg"
+
+  },
+  {
+    "titulo": "Leche de Almendras",
+    "descripcion": "Leche de Almendras.......",
+    "precio": "$7.000",
+    "imagen": "lechealmendra.jpg"
+
+  },
+  {
+    "titulo": "Miel pura de Abejas",
+    "descripcion": "Miel pura de Abejas....",
+    "precio": "$7.000",
+    "imagen": "miel.jpg"
+
+  },
+  {
+    "titulo": "Panela",
+    "descripcion": "Panela ....",
+    "precio": "$7.000",
+    "imagen": "panela.jpg"
+
+  },
+  {
+    "titulo": "Salsas Varias ",
+    "descripcion": "Salsas Varias....",
+    "precio": "$7.000",
+    "imagen": "salsas.jpg"
+
+  },
+  {
+    "titulo": "Selva fresca",
+    "descripcion": "Jugos Selva fresca....",
+    "precio": "$7.000",
+    "imagen": "selva.jpg"
+
+  },
+  {
+    "titulo": "Supercoco",
+    "descripcion": "Supercoco....",
+    "precio": "$7.000",
+    "imagen": "supercoco.jpg"
+
+  }
+]
