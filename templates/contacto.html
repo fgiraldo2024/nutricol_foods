@@ -29,19 +29,19 @@
     <!-- Fin bloque de mensajes -->
 
     <form action="{{ url_for('enviar') }}" method="POST" class="mx-auto mt-4" style="max-width: 500px;">
-      <div class="form-group text-left">
+      <div class="form-group text-left mb-3">
         <label for="nombre">Nombre</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required>
       </div>
-      <div class="form-group text-left">
+      <div class="form-group text-left mb-3">
         <label for="email">Correo electrónico</label>
         <input type="email" class="form-control" id="email" name="email" required>
       </div>
-      <div class="form-group text-left">
+      <div class="form-group text-left mb-3">
         <label for="mensaje">Mensaje</label>
-        <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required></textarea>
       </div>
-      <button type="submit" class="btn btn-success btn-block">Enviar mensaje</button>
+      <button type="submit" class="btn btn-success btn-block w-100">Enviar mensaje</button>
     </form>
 
     <div class="mt-4 mb-5">
@@ -49,4 +49,14 @@
       <p>✉️ Email: <a href="mailto:comercial@nutricolfoods.com" class="text-success">comercial@nutricolfoods.com</a></p>
     </div>
   </div>
+
+  <!-- 👇 Script que inserta los productos en el mensaje -->
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const productos = params.get("productos");
+    if (productos){
+      const mensaje = document.getElementById("mensaje");
+      mensaje.value = "🛒 Productos a cotizar:\n" + productos.split(", ").join("\n") + "\n\n";
+    }
+  </script>
 {% endblock %}

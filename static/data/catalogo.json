@@ -1,97 +1,249 @@
 [
   {
-    "titulo": "Aceite de Aguacate",
-    "descripcion": "Aceite puro de aguacate, 250 ml.",
-    "precio": "$18.000",
-    "imagen": "aceite_aguaca.jpg"
+    "titulo":"Aceite de Aguacate",
+    "descripcion":"Aceite vegetal 100 % puro, extraído del aguacate, ideal para cocinar y aderezar.",
+    "precio":"$18.000",
+    "imagen":"aceite_aguaca.jpg",
+    "presentacion":"Botella 250 ml"
   },
   {
-    "titulo": "Mezcla Maizena Buñuelos",
-    "descripcion": "Caja 300 g. Mezcla especial para buñuelos.",
-    "precio": "$9.500",
-    "imagen": "buñuelos.jpg"
+    "titulo":"Maizena Buñuelos",
+    "descripcion":"Harina preparada para hacer buñuelos tradicionales colombianos.",
+    "precio":"$9.500",
+    "imagen":"buñuelos.jpg",
+    "presentacion":"Caja 300 g"
   },
   {
-    "titulo": "Café Cafetto",
-    "descripcion": "Café artesanal. Presentaciones 2.5 kg y 450 g.",
-    "precio": "$45.000",
-    "imagen": "cafetto_2_presentaciones.png"
+    "titulo":"Cafetto",
+    "descripcion":"Café colombiano, en presentaciones de 2.5 kg y 450 g.",
+    "precio":"$45.000",
+    "imagen":"cafetto_2_presentaciones.png",
+    "presentacion":"Bolsa 2.5 kg \/ 450 g"
   },
   {
-    "titulo": "Chips Monterojo Crema y Cebolla",
-    "descripcion": "Papas sabor crema y cebolla, 150 g.",
-    "precio": "$7.000",
-    "imagen": "chips_nutricol.jpg"
+    "titulo":"Cafetto lata",
+    "descripcion":"Café colombiano, en lata de 2.5 kg y 450 g.",
+    "precio":"$45.000",
+    "imagen":"cafe_lata.png",
+    "presentacion":"Bolsa 2.5 kg \/ 450 g"
+  },
+  {
+    "titulo":"Chips Monterojo",
+    "descripcion":"Papas fritas sabor crema y cebolla, crocantes.",
+    "precio":"$7.000",
+    "imagen":"chips_nutricol.jpg",
+    "presentacion":"Bolsa 150 g"
+  },
+  {
+    "titulo":"Maizena Natilla",
+    "descripcion":"Harina especial para preparar natilla tradicional.",
+    "precio":"$7.000",
+    "imagen":"natilla.jpg",
+    "presentacion":"Caja 300 g"
+  },
+  {
+    "titulo":"CACAO",
+    "descripcion":"Chocolate oscuro con 70% de cacao.",
+    "precio":"$7.000",
+    "imagen":"chocolate_70.jpg",
+    "presentacion":"Tableta 100 g"
+  },
+  {
+    "titulo":"Selvafresca",
+    "descripcion":"Jugos de frutas tropicales.",
+    "precio":"$7.000",
+    "imagen":"jugos_selvafresca.jpg",
+    "presentacion":"Botella 500 ml"
+  },
+  {
+    "titulo":"Leche de Coco",
+    "descripcion":"Extracto natural de coco.",
+    "precio":"$7.000",
+    "imagen":"leche_coco.jpeg",
+    "presentacion":"Lata 400 ml"
+  },
+  {
+    "titulo":"Leche de Almendras",
+    "descripcion":"Bebida vegetal elaborada a partir de almendras.",
+    "precio":"$7.000",
+    "imagen":"lechealmendra.jpg",
+    "presentacion":"Caja 1 L"
+  },
+  {
+    "titulo":"Miel pura de Abejas",
+    "descripcion":"Endulzante natural sin aditivos.",
+    "precio":"$7.000",
+    "imagen":"miel.jpg",
+    "presentacion":"Frasco 500 g"
+  },
+  {
+    "titulo":"Panela",
+    "descripcion":"Endulzante natural de caña en bloque.",
+    "precio":"$7.000",
+    "imagen":"panela.jpg",
+    "presentacion":"Bloque 500 g"
+  },
+  {
+    "titulo":"Salsas Varias",
+    "descripcion":"Variedad de salsas para mesa.",
+    "precio":"$7.000",
+    "imagen":"salsas.jpg",
+    "presentacion":"Frasco 380 g"
+  },
+  {
+    "titulo":"Selva fresca",
+    "descripcion":"Jugos de frutas variadas con sabor tropical.",
+    "precio":"$7.000",
+    "imagen":"selva.jpg",
+    "presentacion":"Botella 500 ml"
+  },
+  {
+    "titulo":"Supercoco Barra",
+    "descripcion":"Caramelo masticable elaborado con coco natural.",
+    "precio":"$7.000",
+    "imagen":"supercoco.jpg",
+    "presentacion":"Barra 20 g"
+  },
+  {
+    "titulo":"Supercoco Bombón",
+    "descripcion":"Caramelo en forma de bombón hecho con coco.",
+    "precio":"$7.000",
+    "imagen":"supercoco2.png",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Supercoco Turrón",
+    "descripcion":"Turrón crujiente de coco.",
+    "precio":"$7.000",
+    "imagen":"super_Turron.webp",
+    "presentacion":"Bolsa x50 unidades"
+  },
+  {
+    "titulo":"Chocolatinas Jet",
+    "descripcion":"Chocolatina de leche icónica en Colombia.",
+    "precio":"$7.000",
+    "imagen":"chocolatina.png",
+    "presentacion":"Paquete x12 unidades"
+  },
+  {
+    "titulo":"Chocolatinas Jet Caja",
+    "descripcion":"Chocolatina jet sabores surtidos.",
+    "precio":"$7.000",
+    "imagen":"Jet-Sabores.png",
+    "presentacion":"Caja x35  unidades"
+  },
+  {
+    "titulo":"Coffee Deligth Duro",
+    "descripcion":"Caramelo duro con sabor a café colombiano.",
+    "precio":"$7.000",
+    "imagen":"coffedeligth.jfif",
+    "presentacion":"Bolsa x100 unidades"
+  },
+  {
+    "titulo":"Coffee Deligth Blando",
+    "descripcion":"Caramelo blando con sabor a café colombiano.",
+    "precio":"$7.000",
+    "imagen":"coffedeligth2.jfif",
+    "presentacion":"Bolsa x100 unidades"
+  },
+  {
+    "titulo":"BombonBun Strawberry",
+    "descripcion":"Paleta rellena de chicle, sabor fresa.",
+    "precio":"$7.000",
+    "imagen":"bombonbun1.jfif",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Bombon Bun Maracuyá",
+    "descripcion":"Paleta rellena de chicle, sabor maracuyá.",
+    "precio":"$7.000",
+    "imagen":"Bombonbun2.png",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Bombon Bun Sabores surtidos",
+    "descripcion":"Paletas rellenas de chicle con sabores surtidos.",
+    "precio":"$7.000",
+    "imagen":"bombon.jfif",
+    "presentacion":"Bolsa surtida x24"
+  },
+  {
+    "titulo":"Bombon Bun Mistery",
+    "descripcion":"Edición especial de Bon Bon Bum con sabores sorpresa.",
+    "precio":"$7.000",
+    "imagen":"BON-BON-BUM-MISTERY-.png",
+    "presentacion":"Edición Mistery x24"
+  },
+  {
+    "titulo":"Chocoramo",
+    "descripcion":"Ponqué recubierto con chocolate, clásico de Ramo.",
+    "precio":7000,
+    "imagen":"chocoramo2.jfif",
+    "presentacion":"Unidad 65 g"
+  },
+  {
+    "titulo": "Papas Margarita Natural",
+    "descripcion": "Papas fritas sabor natural, crocantes y frescas.",
+    "precio": "$3.500",
+    "imagen": "margarita_natural2.png",
+    "presentacion": "Bolsa x105g"
+},
+{
+    "titulo": "Papas Margarita Pollo",
+    "descripcion": "Papas fritas con sabor a pollo asado.",
+    "precio": "$3.800",
+    "imagen": "margarita_pollo.jfif",
+    "presentacion": "Bolsa x105g"
+},
+{
+    "titulo": "Papas Margarita Limón",
+    "descripcion": "Papas fritas con un toque cítrico a limón.",
+    "precio": "$3.800",
+    "imagen": "margarita_limon.jfif",
+    "presentacion": "Bolsa x110g"
+},
+{
+    "titulo": "Papas Margarita BBQ",
+    "descripcion": "Papas fritas con sabor BBQ ahumado.",
+    "precio": "$4.000",
+    "imagen": "margarita_bbq.jfif",
+    "presentacion": "Bolsa x115g"
+},
+{
+    "titulo": "Margarita Crema y Cebolla",
+    "descripcion": "Papas fritas con sabor a crema y cebolla.",
+    "precio": "$4.000",
+    "imagen": "margarita_cebolla.jfif",
+    "presentacion": "Bolsa x110g"
+},
+{
+    "titulo": "Margarita Churrasco",
+    "descripcion": "Papas fritas con sabor tipo churrasco, intenso y delicioso.",
+    "precio": "$4.200",
+    "imagen": "margarita_churrasco.webp",
+    "presentacion": "Bolsa x115g"
+},
+{
+    "titulo": "Maní Sal (Manicero)",
+    "descripcion": "Maní Salado (Manicero). La Especial",
+    "precio": "$4.200",
+    "imagen": "mani3.jfif",
+    "presentacion":"Bolsa 21 g (display x24)"
 
-  },
-  {
-    "titulo": "Mezcla Maizena Natilla",
-    "descripcion": "Caja 300 g. Mezcla especial para buñuelos",
-    "precio": "$7.000",
-    "imagen": "natilla.jpg"
-
-  },
-  {
-    "titulo": "CACAO AL 70%",
-    "descripcion": "Cacacao al 70%",
-    "precio": "$7.000",
-    "imagen": "chocolate_70.jpg"
-
-  },
-  {
-    "titulo": "Jugos Selvafresca",
-    "descripcion": "Jugos Selvafresca.....",
-    "precio": "$7.000",
-    "imagen": "jugos_selvafresca.jpg"
-
-  },
-  {
-    "titulo": "Leche de Coco",
-    "descripcion": "Leche de Coco.........",
-    "precio": "$7.000",
-    "imagen": "leche_coco.jpeg"
-
-  },
-  {
-    "titulo": "Leche de Almendras",
-    "descripcion": "Leche de Almendras.......",
-    "precio": "$7.000",
-    "imagen": "lechealmendra.jpg"
-
-  },
-  {
-    "titulo": "Miel pura de Abejas",
-    "descripcion": "Miel pura de Abejas....",
-    "precio": "$7.000",
-    "imagen": "miel.jpg"
-
-  },
-  {
-    "titulo": "Panela",
-    "descripcion": "Panela ....",
-    "precio": "$7.000",
-    "imagen": "panela.jpg"
-
-  },
-  {
-    "titulo": "Salsas Varias ",
-    "descripcion": "Salsas Varias....",
-    "precio": "$7.000",
-    "imagen": "salsas.jpg"
-
-  },
-  {
-    "titulo": "Selva fresca",
-    "descripcion": "Jugos Selva fresca....",
-    "precio": "$7.000",
-    "imagen": "selva.jpg"
-
-  },
-  {
-    "titulo": "Supercoco",
-    "descripcion": "Supercoco....",
-    "precio": "$7.000",
-    "imagen": "supercoco.jpg"
-
-  }
+},
+{
+    "titulo": "MANI-MIX-ARANDANOS",
+    "descripcion": "Mezcla de maní con arándanos deshidratados.La Especial. ",
+    "precio": "$4.200",
+    "imagen": "ARANDANOS.png",
+    "presentacion":"Bolsa 40 g (display x12)"
+    
+},
+{
+    "titulo": "Maní Limón Pimienta",
+    "descripcion": "Maní sabor alimón y pimienta. La Especial. ",
+    "precio": "$4.200",
+    "imagen": "mani2.jfif",
+    "presentacion": "Bolsa x115g"
+}
 ]

@@ -50,18 +50,61 @@ def enviar():
     nombre = request.form.get("nombre")
     email = request.form.get("email")
     mensaje = request.form.get("mensaje")
+    productos = request.form.get("productos")  # <- Campo extra de productos
 
     try:
         # Crear el correo
-        msg = MIMEMultipart()
+        msg = MIMEMultipart("alternative")  # <- soporta texto y HTML
         msg["Subject"] = f"Nuevo mensaje de {nombre}"
-        msg["From"]    = formataddr(("Sitio Nutricol", EMAIL_USER))  # From = usuario SMTP
+        msg["From"]    = formataddr(("Sitio Nutricol", EMAIL_USER))
         msg["To"]      = EMAIL_TO
         if email:
             msg["Reply-To"] = email
 
-        cuerpo = f"Nombre: {nombre}\nEmail: {email}\n\nMensaje:\n{mensaje}"
-        msg.attach(MIMEText(cuerpo, "plain", "utf-8"))
+        # ---------- Texto plano ----------
+        cuerpo_texto = f"""
+📩 Nuevo mensaje desde la web Nutricol Foods
+
+👤 Nombre: {nombre}
+📧 Email: {email}
+
+📝 Mensaje:
+{mensaje}
+
+🛒 Productos a cotizar:
+{productos if productos else 'Ninguno seleccionado'}
+"""
+
+        # ---------- HTML enriquecido ----------
+        productos_html = ""
+        if productos:
+            for p in productos.splitlines():
+                productos_html += f"<li>{p}</li>"
+        else:
+            productos_html = "<li>Ninguno seleccionado</li>"
+
+        cuerpo_html = f"""
+        <html>
+          <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+            <h2 style="color:#2E8B57;">📩 Nuevo mensaje desde la web Nutricol Foods</h2>
+
+            <p><strong>👤 Nombre:</strong> {nombre}</p>
+            <p><strong>📧 Email:</strong> {email}</p>
+
+            <h3>📝 Mensaje:</h3>
+            <p>{mensaje}</p>
+
+            <h3>🛒 Productos a cotizar:</h3>
+            <ul>
+              {productos_html}
+            </ul>
+          </body>
+        </html>
+        """
+
+        # Adjuntar ambos formatos
+        msg.attach(MIMEText(cuerpo_texto, "plain", "utf-8"))
+        msg.attach(MIMEText(cuerpo_html, "html", "utf-8"))
 
         # Conexión TLS robusta (587)
         context = ssl.create_default_context()
@@ -78,6 +121,8 @@ def enviar():
         flash("❌ Hubo un error al enviar el mensaje. Intenta de nuevo.", "danger")
 
     return redirect(url_for("contacto"))
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
