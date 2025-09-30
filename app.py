@@ -29,10 +29,6 @@ def index():
 def nosotros():
     return render_template("nosotros.html")
 
-@app.route("/productos")
-def productos():
-    return render_template("productos.html")
-
 @app.route("/mercados")
 def mercados():
     return render_template("mercados.html")

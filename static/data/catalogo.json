@@ -49,13 +49,6 @@
     "presentacion":"Tableta 100 g"
   },
   {
-    "titulo":"Selvafresca",
-    "descripcion":"Jugos de frutas tropicales.",
-    "precio":"$7.000",
-    "imagen":"jugos_selvafresca.jpg",
-    "presentacion":"Botella 500 ml"
-  },
-  {
     "titulo":"Leche de Coco",
     "descripcion":"Extracto natural de coco.",
     "precio":"$7.000",
@@ -182,41 +175,6 @@
     "presentacion":"Unidad 65 g"
   },
   {
-    "titulo": "Papas Margarita Natural",
-    "descripcion": "Papas fritas sabor natural, crocantes y frescas.",
-    "precio": "$3.500",
-    "imagen": "margarita_natural2.png",
-    "presentacion": "Bolsa x105g"
-},
-{
-    "titulo": "Papas Margarita Pollo",
-    "descripcion": "Papas fritas con sabor a pollo asado.",
-    "precio": "$3.800",
-    "imagen": "margarita_pollo.jfif",
-    "presentacion": "Bolsa x105g"
-},
-{
-    "titulo": "Papas Margarita Limón",
-    "descripcion": "Papas fritas con un toque cítrico a limón.",
-    "precio": "$3.800",
-    "imagen": "margarita_limon.jfif",
-    "presentacion": "Bolsa x110g"
-},
-{
-    "titulo": "Papas Margarita BBQ",
-    "descripcion": "Papas fritas con sabor BBQ ahumado.",
-    "precio": "$4.000",
-    "imagen": "margarita_bbq.jfif",
-    "presentacion": "Bolsa x115g"
-},
-{
-    "titulo": "Margarita Crema y Cebolla",
-    "descripcion": "Papas fritas con sabor a crema y cebolla.",
-    "precio": "$4.000",
-    "imagen": "margarita_cebolla.jfif",
-    "presentacion": "Bolsa x110g"
-},
-{
     "titulo": "Margarita Churrasco",
     "descripcion": "Papas fritas con sabor tipo churrasco, intenso y delicioso.",
     "precio": "$4.200",
