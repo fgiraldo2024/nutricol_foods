@@ -2,70 +2,60 @@
   {
     "titulo":"Aceite de Aguacate",
     "descripcion":"Aceite vegetal 100 % puro, extraído del aguacate, ideal para cocinar y aderezar.",
-    "precio":"$18.000",
     "imagen":"aceite_aguaca.jpg",
     "presentacion":"Botella 250 ml"
   },
   {
     "titulo":"Maizena Buñuelos",
     "descripcion":"Harina preparada para hacer buñuelos tradicionales colombianos.",
-    "precio":"$9.500",
     "imagen":"buñuelos.jpg",
     "presentacion":"Caja 300 g"
   },
   {
     "titulo":"Cafetto",
     "descripcion":"Café colombiano, en presentaciones de 2.5 kg y 450 g.",
-    "precio":"$45.000",
     "imagen":"cafetto_2_presentaciones.png",
     "presentacion":"Bolsa 2.5 kg \/ 450 g"
   },
   {
     "titulo":"Cafetto lata",
     "descripcion":"Café colombiano, en lata de 2.5 kg y 450 g.",
-    "precio":"$45.000",
     "imagen":"cafe_lata.png",
     "presentacion":"Bolsa 2.5 kg \/ 450 g"
   },
   {
     "titulo":"Chips Monterojo",
     "descripcion":"Papas fritas sabor crema y cebolla, crocantes.",
-    "precio":"$7.000",
     "imagen":"chips_nutricol.jpg",
     "presentacion":"Bolsa 150 g"
   },
   {
     "titulo":"Maizena Natilla",
     "descripcion":"Harina especial para preparar natilla tradicional.",
-    "precio":"$7.000",
     "imagen":"natilla.jpg",
     "presentacion":"Caja 300 g"
   },
   {
     "titulo":"CACAO",
     "descripcion":"Chocolate oscuro con 70% de cacao.",
-    "precio":"$7.000",
     "imagen":"chocolate_70.jpg",
     "presentacion":"Tableta 100 g"
   },
   {
     "titulo":"Leche de Coco",
     "descripcion":"Extracto natural de coco.",
-    "precio":"$7.000",
     "imagen":"leche_coco.jpeg",
     "presentacion":"Lata 400 ml"
   },
   {
     "titulo":"Leche de Almendras",
     "descripcion":"Bebida vegetal elaborada a partir de almendras.",
-    "precio":"$7.000",
     "imagen":"lechealmendra.jpg",
     "presentacion":"Caja 1 L"
   },
   {
     "titulo":"Miel pura de Abejas",
     "descripcion":"Endulzante natural sin aditivos.",
-    "precio":"$7.000",
     "imagen":"miel.jpg",
     "presentacion":"Frasco 500 g"
   },
