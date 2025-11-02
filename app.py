@@ -36,6 +36,9 @@ def mercados():
 @app.route("/catalogo")
 def Catalogo():
     return render_template("catalogo.html")
+@app.route('/servicios')
+def servicios():
+    return render_template('servicios.html')
 
 @app.route("/contacto")
 def contacto():

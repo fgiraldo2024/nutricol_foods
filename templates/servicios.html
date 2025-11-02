@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios - Nutricol Foods{% endblock %}
+
+{% block content %}
+<!-- Encabezado con logo centrado (igual a la página Nosotros) -->
+<section class="text-center my-5">
+  <div class="text-center mb-4">
+    <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" 
+         alt="Logo Nutricol Foods" 
+         style="max-width: 180px; height: auto; margin-bottom: 15px;">
+    <h1 class="mb-0 text-4xl font-bold text-green-700">Nuestros Servicios</h1>
+  </div>
+  <p class="lead text-gray-700">
+    Soluciones integrales en alimentación, distribución y desarrollo comercial.
+  </p>
+</section>
+
+<!-- Sección de introducción -->
+<section class="py-12 px-6 md:px-20 text-center">
+  <h2 class="text-3xl font-bold text-green-700 mb-4">A tu medida</h2>
+  <p class="text-gray-700 leading-relaxed max-w-3xl mx-auto">
+    En <strong>Nutricol Foods</strong> combinamos experiencia, calidad y compromiso para ofrecer servicios 
+    alimentarios y comerciales que conectan a productores colombianos con consumidores e instituciones en distintos mercados. 
+    Desde el Programa de Alimentación Escolar hasta soluciones B2B y private label, somos tu aliado estratégico en cada etapa.
+  </p>
+</section>
+
+<!-- Sección de servicios -->
+<section class="bg-gray-50 py-12">
+  <div class="text-center mb-8">
+    <h2 class="text-3xl font-bold text-green-700">Líneas de Servicio</h2>
+    <p class="text-gray-600 mt-2">Nuestra experiencia al servicio de cada cliente</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 md:px-20">
+    <!-- Servicio 1 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/suministro.png') }}" class="rounded-xl mb-4" alt="Suministro y Distribución B2B">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Suministro y Distribución B2B</h3>
+      <p class="text-gray-600 text-sm">Entrega regular a supermercados, mini-mercados latinos y tiendas especializadas. Logística optimizada con distribuidores mayoristas.</p>
+    </div>
+
+    <!-- Servicio 2 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/Co-packing.png') }}" class="rounded-xl mb-4" alt="Private Label / Co-packing">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Private Label / Co-packing</h3>
+      <p class="text-gray-600 text-sm">Producción y empaque de productos bajo marca del comprador, con certificaciones y volúmenes mínimos establecidos.</p>
+    </div>
+
+    <!-- Servicio 3 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/kits.png') }}" class="rounded-xl mb-4" alt="Kits y Packs de Regalo">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Kits y Packs de Regalo Latino</h3>
+      <p class="text-gray-600 text-sm">Paquetes temáticos (café + snack + cerámica) ideales para retail y ecommerce. Perfectos como regalos o souvenirs de sabor colombiano.</p>
+    </div>
+
+    <!-- Servicio 4 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/mercado_latino.png') }}" class="rounded-xl mb-4" alt="Mercados Latinos">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Mercados Latinos</h3>
+      <p class="text-gray-600 text-sm">Conectamos marcas colombianas con consumidores en EE. UU., Europa y LATAM. Adaptamos productos, empaques y estrategias para cada mercado.</p>
+    </div>
+
+    <!-- Servicio 5 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/foodservices.png') }}" class="rounded-xl mb-4" alt="Foodservice">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Líneas Foodservice (Restaurantes y Hoteles)</h3>
+      <p class="text-gray-600 text-sm">Presentaciones a granel y formatos adaptados para cocinas profesionales, con asesoría técnica y soporte a chefs y distribuidores.</p>
+    </div>
+
+    <!-- Servicio 6 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/tradesuport.png') }}" class="rounded-xl mb-4" alt="Go-to-Market & Trade Support">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Go-to-Market & Trade Support</h3>
+      <p class="text-gray-600 text-sm">Muestras, demostraciones, material POP y capacitación a equipos de ventas del comprador. Apoyamos tu lanzamiento de marca en puntos de venta.</p>
+    </div>
+
+    <!-- Servicio 7 -->
+    <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+      <img src="{{ url_for('static', filename='img/alimento_escolar1.png') }}" class="rounded-xl mb-4" alt="Alimentación Escolar">
+      <h3 class="font-semibold text-lg mb-2 text-green-700">Alimentación Escolar</h3>
+      <p class="text-gray-600 text-sm">Programas integrales de nutrición y suministro para instituciones educativas, en línea con el Programa de Alimentación Escolar (PAE).</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bg-green-700 text-center py-12">
+  <h2 class="text-3xl font-bold text-white mb-4">¿Deseas conocer más sobre nuestros servicios?</h2>
+  <p class="mb-6 text-lg text-white">Contáctanos para diseñar una propuesta adaptada a tu negocio o institución.</p>
+
+  <!-- Botón verde con espacio interior amplio -->
+  <a href="{{ url_for('contacto') }}" 
+   class="inline-block font-semibold rounded-xl transition"
+   style="background-color:#00923f; color:white; padding:14px 40px; text-decoration:none;">
+   Contáctanos
+</a>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
