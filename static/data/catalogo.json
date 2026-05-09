@@ -1,17 +1,5 @@
 [
   {
-    "titulo":"Aceite de Aguacate",
-    "descripcion":"Aceite vegetal 100 % puro, extraído del aguacate, ideal para cocinar y aderezar.",
-    "imagen":"aceite_aguaca.jpg",
-    "presentacion":"Botella 250 ml"
-  },
-  {
-    "titulo":"Maizena Buñuelos",
-    "descripcion":"Harina preparada para hacer buñuelos tradicionales colombianos.",
-    "imagen":"buñuelos.jpg",
-    "presentacion":"Caja 300 g"
-  },
-  {
     "titulo":"Cafetto",
     "descripcion":"Café colombiano, en presentaciones de 2.5 kg y 450 g.",
     "imagen":"cafetto_2_presentaciones.png",
@@ -24,6 +12,69 @@
     "presentacion":"Bolsa 2.5 kg \/ 450 g"
   },
   {
+    "titulo":"Cacao en Pastillas",
+    "descripcion":"Cacao puro en pastilla al 100% cacao",
+    "imagen":"cacaoenpasatillas.png",
+    "presentacion":"Bolsa por 250 Gr,"
+  },
+  {
+    "titulo":"Cacao puro en polvo",
+    "descripcion":"Cacao al 100%, sin azúcar, sin gluten, libre de aditivos quimicos, sin grasas trans.",
+    "imagen": "cacaoenpolvo.jpg",
+    "presentacion":"Bolsa por 250 Gr,"
+  },
+  {
+    "titulo":"Barras de cacao al 70%",
+    "descripcion":"Barras de cacao 70% cacao de origen, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez.",
+    "imagen": "Barra-70-dispensador.jpg",
+    "presentacion":"Barras,"
+  },
+  {
+    "titulo":"Barra con arándanos",
+    "descripcion":"Barras de cacao 70% con arándanos, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez",
+    "imagen": "Barra-arandanos-con-dispensador-granos-600x600.png",
+    "presentacion":"Barras,"
+  },
+  {
+    "titulo":"Nibs de cacao",
+    "descripcion":"Exquisitos granos de cacao tostado, cacao al 100%, sin azúcar, sin gluten, libre de aditivos químicos, sin grasas trans.",
+    "imagen": "Nibs-cacaopq.jpg",
+    "presentacion":"Paquete por 140 gr,"
+  },
+  {
+    "titulo":"Miel pura de Abejas",
+    "descripcion":"Endulzante natural sin aditivos.",
+    "imagen":"vibre_miel.jpg",
+    "presentacion":"Frasco 500 g y 300 g"
+  },
+
+  {
+    "titulo":"Miel pura de Abejas",
+    "descripcion":"Endulzante natural sin aditivos.",
+    "imagen":"miel1450.jpg",
+    "presentacion":"Garrafa 1450 g"
+  },
+
+  {
+    "titulo":"Uchuva en miel de Abejas",
+    "descripcion":"Fruta untable.",
+    "imagen":"vibre_uchuva.jpg",
+    "presentacion":"Garrafa 1450 g"
+  },
+  {
+    "titulo":"Aceite de Aguacate",
+    "descripcion":"Aceite vegetal 100 % puro, extraído del aguacate, ideal para cocinar y aderezar.",
+    "imagen":"aceite_aguaca.jpg",
+    "presentacion":"Botella 250 ml"
+  },
+  {
+    "titulo":"Maizena Buñuelos",
+    "descripcion":"Harina preparada para hacer buñuelos tradicionales colombianos.",
+    "imagen":"buñuelos.jpg",
+    "presentacion":"Caja 300 g"
+  },
+  
+  {
     "titulo":"Chips Monterojo",
     "descripcion":"Papas fritas sabor crema y cebolla, crocantes.",
     "imagen":"chips_nutricol.jpg",
@@ -35,12 +86,7 @@
     "imagen":"natilla.jpg",
     "presentacion":"Caja 300 g"
   },
-  {
-    "titulo":"CACAO",
-    "descripcion":"Chocolate oscuro con 70% de cacao.",
-    "imagen":"chocolate_70.jpg",
-    "presentacion":"Tableta 100 g"
-  },
+  
   {
     "titulo":"Leche de Coco",
     "descripcion":"Extracto natural de coco.",
@@ -53,12 +99,7 @@
     "imagen":"lechealmendra.jpg",
     "presentacion":"Caja 1 L"
   },
-  {
-    "titulo":"Miel pura de Abejas",
-    "descripcion":"Endulzante natural sin aditivos.",
-    "imagen":"miel.jpg",
-    "presentacion":"Frasco 500 g"
-  },
+  
   {
     "titulo":"Panela",
     "descripcion":"Endulzante natural de caña en bloque.",
