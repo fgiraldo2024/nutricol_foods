@@ -56,6 +56,13 @@
   },
 
   {
+    "titulo":"Crema de mani",
+    "descripcion":"Mantequilla de Mani con o sin miel pura untable.",
+    "imagen":"crema_mani.PNG",
+    "presentacion":"250/400 g"
+  },
+
+  {
     "titulo":"Uchuva en miel de Abejas",
     "descripcion":"Fruta untable.",
     "imagen":"vibre_uchuva.jpg",
