@@ -3,7 +3,9 @@ import smtplib
 import ssl
 from email.utils import formataddr
 
-from flask import Flask, render_template, request, redirect, url_for, flash
+#from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
+
 from dotenv import load_dotenv
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -36,6 +38,14 @@ def mercados():
 @app.route("/catalogo")
 def Catalogo():
     return render_template("catalogo.html")
+#########################################
+@app.route("/catalogo.json")
+def catalogo_json():
+    return send_from_directory(app.root_path, "catalogo.json")
+
+##########################################
+
+
 @app.route('/servicios')
 def servicios():
     return render_template('servicios.html')

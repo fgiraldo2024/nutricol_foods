@@ -1,0 +1,118 @@
+[
+  {
+    "titulo": "Café Cafetto",
+    "descripcion": "Café artesanal. Presentaciones 2.5 kg y 450 g.",
+    "precio": "$45.000",
+    "imagen": "cafetto_2_presentaciones.png"
+  },
+
+  {
+    "titulo": "Cafetto lata",
+    "descripcion": "Café artesanal. Presentaciones 2.5 kg y 450 g.",
+    "precio": "$45.000",
+    "imagen": "cafe_lata.png"
+  },
+  {
+    "titulo": "Cacao en Pastillas",
+    "descripcion": "Cacao puro en pastilla al 100% cacao",
+    "precio": "$45.000",
+    "imagen": "Pastilla-x-kilo-300x300.png"
+  },
+  {
+    "titulo": "Cacao puro en polvo",
+    "descripcion": "Cacao al 100%, sin azúcar, sin gluten, libre de aditivos quimicos, sin grasas trans.",
+    "precio": "$45.000",
+    "imagen": "cacaoenpolvo.jpg"
+  },
+  {
+    "titulo": "Barras de cacao al 70%",
+    "descripcion": "Barras de cacao 70% cacao de origen, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez.",
+    "precio": "$45.000",
+    "imagen": "Barra-70-dispensador.jpg"
+  },
+
+  {
+    "titulo": "Barra con arándanos",
+    "descripcion": "Barras de cacao 70% con arándanos, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez",
+    "precio": "$45.000",
+    "imagen": "Barra-arandanos-con-dispensador-granos-600x600.png"
+  },
+
+  {
+    "titulo": "CACAO CORDILLERA AL 70%",
+    "descripcion": "Cacacao al 70%",
+    "precio": "$7.000",
+    "imagen": "chocolate_70.jpg"
+
+  },
+  {
+    "titulo": "Nibs de cacao",
+    "descripcion": "Exquisitos granos de cacao tostado, cacao al 100%, sin azúcar, sin gluten, libre de aditivos químicos, sin grasas trans.",
+    "precio": "$45.000",
+    "imagen": "Nibs-x-kilo-300x300.png"
+  },
+
+  {
+    "titulo": "Miel pura de Abejas",
+    "descripcion": "Endulzante natural sin aditivos.",
+    "precio": "$45.000",
+    "imagen": "vibre_miel.jpg"
+  },
+
+  {
+    "titulo": "Miel pura de Abejas",
+    "descripcion": "Endulzante natural sin aditivos.",
+    "precio": "$45.000",
+    "imagen": "miel1450.jpg"
+  },
+
+  {
+    "titulo": "Miel pura de Abejas",
+    "descripcion": "Miel pura de Abejas....",
+    "precio": "$7.000",
+    "imagen": "miel.jpg"
+
+  },
+  
+  {
+    "titulo": "Crema de mani",
+    "descripcion": "Mantequilla de Mani con o sin miel pura untable.",
+    "precio": "$45.000",
+    "imagen": "crema_mani.png"
+  },
+
+  {
+    "titulo": "Uchuva en miel de Abejas",
+    "descripcion": "Fruta untable",
+    "precio": "$45.000",
+    "imagen": "vibre_uchuva.jpg"
+  },
+  
+
+  {
+    "titulo": "Crema de marañón",
+    "descripcion": "Nutritiva crema de marañón",
+    "precio": "$45.000",
+    "imagen": "Cremamaranon.png"
+  },
+
+
+
+
+  {
+    "titulo": "Aceite de Aguacate",
+    "descripcion": "Aceite puro de aguacate, 250 ml.",
+    "precio": "$18.000",
+    "imagen": "aceite_aguaca.jpg"
+  },
+ 
+  
+  {
+    "titulo": "Panela",
+    "descripcion": "Panela ....",
+    "precio": "$7.000",
+    "imagen": "panela.jpg"
+
+  }
+  
+ ]
