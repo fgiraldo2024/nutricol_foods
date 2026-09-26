@@ -1,0 +1,14 @@
+<article class="product-card" data-category="{{ product.categoria }}">
+  <div class="product-image">
+    <span class="product-index">{{ '%02d' | format(product.id | int) }}</span>
+    <img src="{{ product.image_url }}" alt="{{ product.titulo }} — producto colombiano disponible para consulta comercial" loading="lazy" width="400" height="400">
+  </div>
+  <div class="product-info">
+    <h3>{{ product.titulo }}</h3>
+    <p>{{ product.descripcion }}</p>
+    <div class="product-bottom">
+      <span class="small-label">{{ product.categoria }}</span>
+      <button class="add-product" type="button" data-add-product="{{ product.id }}" aria-label="Agregar {{ product.titulo }} a mi selección">Agregar <span aria-hidden="true">＋</span></button>
+    </div>
+  </div>
+</article>

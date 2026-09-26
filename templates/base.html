@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d2c">
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Nutricol Foods">
+  <meta property="og:title" content="{{ seo.title }}">
+  <meta property="og:description" content="{{ seo.description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ request.url_root.rstrip('/') }}{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ seo.title }}">
+  <meta name="twitter:description" content="{{ seo.description }}">
+  <link rel="icon" href="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/site.css') }}">
+  <script type="application/ld+json">{{ {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nutricol Foods",
+    "url": request.url_root.rstrip('/'),
+    "logo": request.url_root.rstrip('/') ~ url_for('static', filename='img/logo_nutricol_transparent.png'),
+    "description": "Alimentos colombianos y soluciones B2B de abastecimiento y distribución.",
+    "contactPoint": {"@type": "ContactPoint", "telephone": "+57 301 735 7829", "contactType": "sales"},
+    "sameAs": ["https://www.instagram.com/nutricolfoodsllc/", "https://www.facebook.com/profile.php?id=61580822052741"]
+  } | tojson }}</script>
+  <script type="application/ld+json">{{ {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Nutricol Foods",
+    "url": request.url_root.rstrip('/')
+  } | tojson }}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="{{ url_for('home') }}" aria-label="Nutricol Foods, ir al inicio">
+        <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" alt="Nutricol Foods — Alimentos colombianos" width="185" height="62">
+      </a>
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
+        <a href="{{ url_for('home') }}" {% if page == 'home' %}aria-current="page"{% endif %}>Inicio</a>
+        <a href="{{ url_for('nosotros') }}" {% if page == 'nosotros' %}aria-current="page"{% endif %}>Nosotros</a>
+        <a href="{{ url_for('mercados') }}" {% if page == 'mercados' %}aria-current="page"{% endif %}>Mercados</a>
+        <a href="{{ url_for('servicios') }}" {% if page == 'servicios' %}aria-current="page"{% endif %}>Servicios</a>
+        <a href="{{ url_for('catalogo') }}" {% if page == 'catalogo' %}aria-current="page"{% endif %}>Catálogo</a>
+        <a href="{{ url_for('contacto') }}" {% if page == 'contacto' %}aria-current="page"{% endif %}>Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <button class="header-quote" type="button" data-open-quote>Mi selección <span class="quote-count" data-quote-count>0</span></button>
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="main">{% block content %}{% endblock %}</main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Nutricol <span>Foods.</span></div>
+          <p class="footer-intro">De la despensa colombiana a nuevas oportunidades de negocio. Alimentos con origen, conexiones con futuro.</p>
+        </div>
+        <div>
+          <div class="footer-title">Explorar</div>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
+            <li><a href="{{ url_for('mercados') }}">Mercados</a></li>
+            <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+            <li><a href="{{ url_for('catalogo') }}">Catálogo</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Conectar</div>
+          <ul class="footer-links">
+            <li><a href="{{ url_for('contacto') }}">Contacto comercial</a></li>
+            <li><a href="https://wa.me/573017357829" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/nutricolfoodsllc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61580822052741" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-title">Hablemos de negocios</div>
+          <p class="footer-intro">¿Buscas productos colombianos para tu mercado? Cuéntanos qué necesitas.</p>
+          <a class="text-link" href="https://wa.me/573017357829" target="_blank" rel="noopener noreferrer">+57 301 735 7829 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© {{ current_year }} Nutricol Foods. Alimentos colombianos.</span><span>Origen en Antioquia, Colombia.</span></div>
+    </div>
+  </footer>
+  <div class="quote-drawer" id="quote-drawer" aria-hidden="true">
+    <button class="drawer-backdrop" type="button" data-close-quote aria-label="Cerrar selección"></button>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
+      <div class="drawer-head">
+        <div><span class="eyebrow orange">Cotización B2B</span><h2 id="drawer-title">Tu selección</h2></div>
+        <button class="icon-button" type="button" data-close-quote aria-label="Cerrar selección">×</button>
+      </div>
+      <div class="drawer-items" id="drawer-items" aria-live="polite"></div>
+      <div class="drawer-footer" id="drawer-footer"></div>
+    </aside>
+  </div>
+  <script id="products-data" type="application/json">{{ products_data | tojson }}</script>
+  <script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
+</body>
+</html>

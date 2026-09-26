@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="{{ url_for('home') }}">Inicio</a><span>/</span> Catálogo</div><h1>La despensa que <em>nos representa.</em></h1><p>Explora nuestra selección, guarda las referencias que te interesan y conversemos sobre las posibilidades para tu negocio.</p></div></section>
+<section class="section" aria-labelledby="catalog-title"><div class="container">
+  <div class="section-header"><div><span class="eyebrow orange">Productos colombianos</span><h2 id="catalog-title">Explora el <span class="display-italic">catálogo.</span></h2></div><button class="btn btn-outline" type="button" data-open-quote>Ver mi selección <span class="arrow" aria-hidden="true">↗</span></button></div>
+  <div class="catalog-note">Las presentaciones, condiciones comerciales y disponibilidad se conversan según tu necesidad. Selecciona productos para solicitar información B2B por WhatsApp.</div>
+  <div class="catalog-toolbar"><div class="filters" role="group" aria-label="Filtrar productos por categoría"><button class="filter active" type="button" data-filter="Todos" aria-pressed="true">Todos</button><button class="filter" type="button" data-filter="Café" aria-pressed="false">Café</button><button class="filter" type="button" data-filter="Cacao" aria-pressed="false">Cacao</button><button class="filter" type="button" data-filter="Miel y frutas" aria-pressed="false">Miel y frutas</button><button class="filter" type="button" data-filter="Despensa" aria-pressed="false">Despensa</button></div><span class="catalog-count" id="catalog-count">{{ products|length }} productos</span></div>
+  <div class="catalog-grid" id="catalog-grid">{% for product in products %}{% include "_product_card.html" %}{% endfor %}</div>
+</div></section>
+<section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">¿Buscas algo específico?</span><h2>Cuéntanos qué necesita <em>tu negocio.</em></h2></div><a class="btn btn-light" href="{{ url_for('contacto') }}">Hacer una consulta <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+{% endblock %}
