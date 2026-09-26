@@ -1,0 +1,252 @@
+[
+  {
+    "titulo":"Cafetto",
+    "descripcion":"Café colombiano, en presentaciones de 2.5 kg y 450 g.",
+    "imagen":"cafetto_2_presentaciones.png",
+    "presentacion":"Bolsa 2.5 kg \/ 450 g"
+  },
+  {
+    "titulo":"Cafetto lata",
+    "descripcion":"Café colombiano, en lata de 2.5 kg y 450 g.",
+    "imagen":"cafe_lata.png",
+    "presentacion":"Bolsa 2.5 kg \/ 450 g"
+  },
+  {
+    "titulo":"Cacao en Pastillas",
+    "descripcion":"Cacao puro en pastilla al 100% cacao",
+    "imagen":"cacaoenpasatillas.png",
+    "presentacion":"Bolsa por 250 Gr,"
+  },
+  {
+    "titulo":"Cacao puro en polvo",
+    "descripcion":"Cacao al 100%, sin azúcar, sin gluten, libre de aditivos quimicos, sin grasas trans.",
+    "imagen": "cacaoenpolvo.jpg",
+    "presentacion":"Bolsa por 250 Gr,"
+  },
+  {
+    "titulo":"Barras de cacao al 70%",
+    "descripcion":"Barras de cacao 70% cacao de origen, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez.",
+    "imagen": "Barra-70-dispensador.jpg",
+    "presentacion":"Barras,"
+  },
+  {
+    "titulo":"Barra con arándanos",
+    "descripcion":"Barras de cacao 70% con arándanos, bean to bar. Intenso sabor a cacao con suaves matices a frutos secos y nuez",
+    "imagen": "Barra-arandanos-con-dispensador-granos-600x600.png",
+    "presentacion":"Barras,"
+  },
+  {
+    "titulo":"Nibs de cacao",
+    "descripcion":"Exquisitos granos de cacao tostado, cacao al 100%, sin azúcar, sin gluten, libre de aditivos químicos, sin grasas trans.",
+    "imagen": "Nibs-cacaopq.jpg",
+    "presentacion":"Paquete por 140 gr,"
+  },
+  {
+    "titulo":"Miel pura de Abejas",
+    "descripcion":"Endulzante natural sin aditivos.",
+    "imagen":"vibre_miel.jpg",
+    "presentacion":"Frasco 500 g y 300 g"
+  },
+
+  {
+    "titulo":"Miel pura de Abejas",
+    "descripcion":"Endulzante natural sin aditivos.",
+    "imagen":"miel1450.jpg",
+    "presentacion":"Garrafa 1450 g"
+  },
+
+  {
+    "titulo":"Crema de mani",
+    "descripcion":"Mantequilla de Mani con o sin miel pura untable.",
+    "imagen":"crema_mani.PNG",
+    "presentacion":"250/400 g"
+  },
+
+  {
+    "titulo":"Uchuva en miel de Abejas",
+    "descripcion":"Fruta untable.",
+    "imagen":"vibre_uchuva.jpg",
+    "presentacion":"Garrafa 1450 g"
+  },
+
+  {
+    "titulo":"Crema de marañón",
+    "descripcion":"Nutritiva crema de marañón",
+    "imagen":"Cremamaranon.png",
+    "presentacion":"Garrafa 1450 g"
+  },
+  {
+    "titulo":"Aceite de Aguacate",
+    "descripcion":"Aceite vegetal 100 % puro, extraído del aguacate, ideal para cocinar y aderezar.",
+    "imagen":"aceite_aguaca.jpg",
+    "presentacion":"Botella 250 ml"
+  },
+  {
+    "titulo":"Maizena Buñuelos",
+    "descripcion":"Harina preparada para hacer buñuelos tradicionales colombianos.",
+    "imagen":"buñuelos.jpg",
+    "presentacion":"Caja 300 g"
+  },
+  
+  {
+    "titulo":"Chips Monterojo",
+    "descripcion":"Papas fritas sabor crema y cebolla, crocantes.",
+    "imagen":"chips_nutricol.jpg",
+    "presentacion":"Bolsa 150 g"
+  },
+  {
+    "titulo":"Maizena Natilla",
+    "descripcion":"Harina especial para preparar natilla tradicional.",
+    "imagen":"natilla.jpg",
+    "presentacion":"Caja 300 g"
+  },
+  
+  {
+    "titulo":"Leche de Coco",
+    "descripcion":"Extracto natural de coco.",
+    "imagen":"leche_coco.jpeg",
+    "presentacion":"Lata 400 ml"
+  },
+  {
+    "titulo":"Leche de Almendras",
+    "descripcion":"Bebida vegetal elaborada a partir de almendras.",
+    "imagen":"lechealmendra.jpg",
+    "presentacion":"Caja 1 L"
+  },
+  
+  {
+    "titulo":"Panela",
+    "descripcion":"Endulzante natural de caña en bloque.",
+    "precio":"$7.000",
+    "imagen":"panela.jpg",
+    "presentacion":"Bloque 500 g"
+  },
+  {
+    "titulo":"Salsas Varias",
+    "descripcion":"Variedad de salsas para mesa.",
+    "precio":"$7.000",
+    "imagen":"salsas.jpg",
+    "presentacion":"Frasco 380 g"
+  },
+  {
+    "titulo":"Selva fresca",
+    "descripcion":"Jugos de frutas variadas con sabor tropical.",
+    "precio":"$7.000",
+    "imagen":"selva.jpg",
+    "presentacion":"Botella 500 ml"
+  },
+  {
+    "titulo":"Supercoco Barra",
+    "descripcion":"Caramelo masticable elaborado con coco natural.",
+    "precio":"$7.000",
+    "imagen":"supercoco.jpg",
+    "presentacion":"Barra 20 g"
+  },
+  {
+    "titulo":"Supercoco Bombón",
+    "descripcion":"Caramelo en forma de bombón hecho con coco.",
+    "precio":"$7.000",
+    "imagen":"supercoco2.png",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Supercoco Turrón",
+    "descripcion":"Turrón crujiente de coco.",
+    "precio":"$7.000",
+    "imagen":"super_Turron.webp",
+    "presentacion":"Bolsa x50 unidades"
+  },
+  {
+    "titulo":"Chocolatinas Jet",
+    "descripcion":"Chocolatina de leche icónica en Colombia.",
+    "precio":"$7.000",
+    "imagen":"chocolatina.png",
+    "presentacion":"Paquete x12 unidades"
+  },
+  {
+    "titulo":"Chocolatinas Jet Caja",
+    "descripcion":"Chocolatina jet sabores surtidos.",
+    "precio":"$7.000",
+    "imagen":"Jet-Sabores.png",
+    "presentacion":"Caja x35  unidades"
+  },
+  {
+    "titulo":"Coffee Deligth Duro",
+    "descripcion":"Caramelo duro con sabor a café colombiano.",
+    "precio":"$7.000",
+    "imagen":"coffedeligth.jfif",
+    "presentacion":"Bolsa x100 unidades"
+  },
+  {
+    "titulo":"Coffee Deligth Blando",
+    "descripcion":"Caramelo blando con sabor a café colombiano.",
+    "precio":"$7.000",
+    "imagen":"coffedeligth2.jfif",
+    "presentacion":"Bolsa x100 unidades"
+  },
+  {
+    "titulo":"BombonBun Strawberry",
+    "descripcion":"Paleta rellena de chicle, sabor fresa.",
+    "precio":"$7.000",
+    "imagen":"bombonbun1.jfif",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Bombon Bun Maracuyá",
+    "descripcion":"Paleta rellena de chicle, sabor maracuyá.",
+    "precio":"$7.000",
+    "imagen":"Bombonbun2.png",
+    "presentacion":"Bolsa x24 unidades"
+  },
+  {
+    "titulo":"Bombon Bun Sabores surtidos",
+    "descripcion":"Paletas rellenas de chicle con sabores surtidos.",
+    "precio":"$7.000",
+    "imagen":"bombon.jfif",
+    "presentacion":"Bolsa surtida x24"
+  },
+  {
+    "titulo":"Bombon Bun Mistery",
+    "descripcion":"Edición especial de Bon Bon Bum con sabores sorpresa.",
+    "precio":"$7.000",
+    "imagen":"BON-BON-BUM-MISTERY-.png",
+    "presentacion":"Edición Mistery x24"
+  },
+  {
+    "titulo":"Chocoramo",
+    "descripcion":"Ponqué recubierto con chocolate, clásico de Ramo.",
+    "precio":7000,
+    "imagen":"chocoramo2.jfif",
+    "presentacion":"Unidad 65 g"
+  },
+  {
+    "titulo": "Margarita Churrasco",
+    "descripcion": "Papas fritas con sabor tipo churrasco, intenso y delicioso.",
+    "precio": "$4.200",
+    "imagen": "margarita_churrasco.webp",
+    "presentacion": "Bolsa x115g"
+},
+{
+    "titulo": "Maní Sal (Manicero)",
+    "descripcion": "Maní Salado (Manicero). La Especial",
+    "precio": "$4.200",
+    "imagen": "mani3.jfif",
+    "presentacion":"Bolsa 21 g (display x24)"
+
+},
+{
+    "titulo": "MANI-MIX-ARANDANOS",
+    "descripcion": "Mezcla de maní con arándanos deshidratados.La Especial. ",
+    "precio": "$4.200",
+    "imagen": "ARANDANOS.png",
+    "presentacion":"Bolsa 40 g (display x12)"
+    
+},
+{
+    "titulo": "Maní Limón Pimienta",
+    "descripcion": "Maní sabor alimón y pimienta. La Especial. ",
+    "precio": "$4.200",
+    "imagen": "mani2.jfif",
+    "presentacion": "Bolsa x115g"
+}
+]

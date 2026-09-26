@@ -1,0 +1,41 @@
+# Archivos de entorno
+.env
+
+# Archivos de configuración local
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+*.sqlite3
+
+# Carpetas de entorno virtual
+venv/
+.venv/
+env/
+ENV/
+
+# Archivos de logs
+*.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Carpeta de caché de Flask
+instance/
+
+# Archivos de pruebas/pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Archivos de IDE
+.vscode/
+.idea/
