@@ -5,11 +5,13 @@ from pathlib import Path
 from urllib.parse import quote
 from xml.sax.saxutils import escape
 
-from flask import Flask, Response, render_template, request, url_for
+from flask import Flask, Response, redirect, render_template, request, session, url_for
 
+from english import CATEGORIES, SEO as ENGLISH_SEO, translated_products
 
 BASE_DIR = Path(__file__).resolve().parent
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY", "nutricol-language-session-change-in-production")
 
 with (BASE_DIR / "catalogo.json").open(encoding="utf-8") as catalog_file:
     raw_products = json.load(catalog_file)
@@ -26,7 +28,7 @@ def category_for(title):
     return "Despensa"
 
 
-PRODUCTS = [
+PRODUCTS_ES = [
     {
         **product,
         "id": str(index),
@@ -35,6 +37,7 @@ PRODUCTS = [
     }
     for index, product in enumerate(raw_products, start=1)
 ]
+PRODUCTS_EN = translated_products(PRODUCTS_ES)
 
 PAGES = {
     "home": {
@@ -71,22 +74,37 @@ PAGES = {
 @app.context_processor
 def common_context():
     page = request.endpoint if request.endpoint in PAGES else "404"
+    lang = session.get("lang", "es")
+    products = PRODUCTS_EN if lang == "en" else PRODUCTS_ES
+    seo = PAGES[page]
+    if lang == "en":
+        seo = {"title": ENGLISH_SEO[page][0], "description": ENGLISH_SEO[page][1]}
     canonical = request.url_root.rstrip("/") + request.path
     return {
         "page": page,
-        "seo": PAGES[page],
+        "lang": lang,
+        "seo": seo,
         "canonical": canonical,
         "current_year": datetime.now().year,
         "products_data": [
             {"id": p["id"], "titulo": p["titulo"], "image_url": p["image_url"]}
-            for p in PRODUCTS
+            for p in products
         ],
     }
 
 
+@app.route("/set-language/<lang>")
+def set_language(lang):
+    if lang in ("es", "en"):
+        session["lang"] = lang
+    destination = request.referrer or url_for("home")
+    return redirect(destination)
+
+
 @app.route("/")
 def home():
-    return render_template("home.html", featured=[PRODUCTS[i] for i in (0, 2, 8, 14)])
+    products = PRODUCTS_EN if session.get("lang") == "en" else PRODUCTS_ES
+    return render_template("home.html", featured=[products[i] for i in (0, 2, 8, 14)])
 
 
 @app.route("/nosotros")
@@ -106,7 +124,8 @@ def servicios():
 
 @app.route("/catalogo")
 def catalogo():
-    return render_template("catalogo.html", products=PRODUCTS)
+    products = PRODUCTS_EN if session.get("lang") == "en" else PRODUCTS_ES
+    return render_template("catalogo.html", products=products)
 
 
 @app.route("/contacto")
