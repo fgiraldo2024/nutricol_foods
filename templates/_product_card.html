@@ -7,8 +7,8 @@
     <h3>{{ product.titulo }}</h3>
     <p>{{ product.descripcion }}</p>
     <div class="product-bottom">
-      <span class="small-label">{{ product.categoria }}</span>
-      <button class="add-product" type="button" data-add-product="{{ product.id }}" aria-label="Agregar {{ product.titulo }} a mi selección">Agregar <span aria-hidden="true">＋</span></button>
+      <span class="small-label">{{ categories.get(product.categoria, product.categoria) if lang == "en" else product.categoria }}</span>
+      <button class="add-product" type="button" data-add-product="{{ product.id }}" aria-label="{{ ('Add ' ~ product.titulo ~ ' to my selection') if lang == 'en' else ('Agregar ' ~ product.titulo ~ ' a mi selección') }}">{{ "Add" if lang == "en" else "Agregar" }} <span aria-hidden="true">＋</span></button>
     </div>
   </div>
 </article>
