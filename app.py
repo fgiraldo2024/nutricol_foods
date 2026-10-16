@@ -37,7 +37,10 @@ PRODUCTS_ES = [
     }
     for index, product in enumerate(raw_products, start=1)
 ]
-PRODUCTS_EN = translated_products(PRODUCTS_ES)
+PRODUCTS_EN = [
+    {**product, "categoria": CATEGORIES.get(product["categoria"], product["categoria"])}
+    for product in translated_products(PRODUCTS_ES)
+]
 
 PAGES = {
     "home": {
