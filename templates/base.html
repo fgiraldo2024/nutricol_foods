@@ -51,7 +51,7 @@
         <a href="{{ url_for('catalogo') }}" {% if page == 'catalogo' %}aria-current="page"{% endif %}>{{ "Catalog" if lang == "en" else "Catálogo" }}</a>
         <a href="{{ url_for('contacto') }}" {% if page == 'contacto' %}aria-current="page"{% endif %}>{{ "Contact" if lang == "en" else "Contacto" }}</a>
       </nav>
-      <div class="header-actions"><div class="language-switch" aria-label="Language"><a href="{{ url_for('set_language', lang='es') }}" {% if lang == 'es' %}aria-current="true"{% endif %}>ES</a><span>/</span><a href="{{ url_for('set_language', lang='en') }}" {% if lang == 'en' %}aria-current="true"{% endif %}>EN</a></div>
+      <div class="header-actions"><div class="language-switch" aria-label="{{ 'Language' if lang == 'en' else 'Idioma' }}"><a href="{{ url_for('set_language', lang='es') }}" {% if lang == 'es' %}aria-current="true"{% endif %}>ES</a><span>/</span><a href="{{ url_for('set_language', lang='en') }}" {% if lang == 'en' %}aria-current="true"{% endif %}>EN</a></div>
         <button class="header-quote" type="button" data-open-quote>{{ "My selection" if lang == "en" else "Mi selección" }} <span class="quote-count" data-quote-count>0</span></button>
         <button class="menu-toggle" type="button" aria-label="{{ 'Open menu' if lang == 'en' else 'Abrir menú' }}" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
       </div>
