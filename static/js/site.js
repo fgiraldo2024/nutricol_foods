@@ -73,7 +73,7 @@
     const companyPrompt = tr("Mi empresa es:", "My company is:");
     const marketPrompt = tr("El mercado de destino es:", "The destination market is:");
     const thanks = tr("Gracias.", "Thank you.");
-    link.href = `https://wa.me/573017357829?text=${encodeURIComponent(quoteIntro + "\n\n" + selection.map((id, index) => `${index + 1}. ${byId.get(id).titulo}`).join("\n") + `\n\n${companyPrompt} \n${marketPrompt} \n${thanks}`)}`;
+    link.href = `https://wa.me/573246331156?text=${encodeURIComponent(quoteIntro + "\n\n" + selection.map((id, index) => `${index + 1}. ${byId.get(id).titulo}`).join("\n") + `\n\n${companyPrompt} \n${marketPrompt} \n${thanks}`)}`;
     link.innerHTML = tr("Solicitar cotización", "Request a quote") + ' <span class="arrow" aria-hidden="true">↗</span>';
     footer.append(note, link);
   }
@@ -142,7 +142,7 @@
     if (!form.reportValidity()) return;
     const data = new FormData(form);
     const message = `${tr("Hola, equipo Nutricol Foods. Quisiera conversar sobre una oportunidad comercial.", "Hello, Nutricol Foods team. I would like to discuss a business opportunity.")}\n\n${tr("Nombre", "Name")}: ${data.get("name")}\n${tr("Empresa", "Company")}: ${data.get("company")}\n${tr("Correo", "Email")}: ${data.get("email")}\n${tr("Tipo de negocio", "Business type")}: ${data.get("type")}\n\n${tr("Mi consulta", "My inquiry")}: ${data.get("message")}`;
-    const url = `https://wa.me/573017357829?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/573246331156?text=${encodeURIComponent(message)}`;
     const opened = window.open(url, "_blank", "noopener,noreferrer");
     if (!opened) window.location.href = url;
   });
