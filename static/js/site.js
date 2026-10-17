@@ -58,7 +58,7 @@
       remove.type = "button";
       remove.className = "remove-item";
       remove.textContent = tr("Quitar", "Remove");
-      remove.setAttribute("aria-label", `Quitar ${product.titulo} de mi selección`);
+      remove.setAttribute("aria-label", tr(`Quitar ${product.titulo} de mi selección`, `Remove ${product.titulo} from my selection`));
       remove.addEventListener("click", () => { selection = selection.filter((item) => item !== id); persist(); });
       row.append(image, title, remove);
       items.append(row);
