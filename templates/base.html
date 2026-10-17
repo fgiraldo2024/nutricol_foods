@@ -8,7 +8,7 @@
   <meta name="description" content="{{ seo.description }}">
   <link rel="canonical" href="{{ canonical }}">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'es_CO' }}">
   <meta property="og:site_name" content="Nutricol Foods">
   <meta property="og:title" content="{{ seo.title }}">
   <meta property="og:description" content="{{ seo.description }}">
@@ -25,7 +25,7 @@
     "name": "Nutricol Foods",
     "url": request.url_root.rstrip('/'),
     "logo": request.url_root.rstrip('/') ~ url_for('static', filename='img/logo_nutricol_transparent.png'),
-    "description": "Alimentos colombianos y soluciones B2B de abastecimiento y distribución.",
+    "description": ("Colombian foods and B2B sourcing and distribution solutions." if lang == "en" else "Alimentos colombianos y soluciones B2B de abastecimiento y distribución."),
     "contactPoint": {"@type": "ContactPoint", "telephone": "+57 324 633 1156", "contactType": "sales"},
     "sameAs": ["https://www.instagram.com/nutricolfoodsllc/", "https://www.facebook.com/profile.php?id=61580822052741"]
   } | tojson }}</script>
@@ -41,7 +41,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="{{ url_for('home') }}" aria-label="{{ 'Nutricol Foods, go to home' if lang == 'en' else 'Nutricol Foods, ir al inicio' }}">
-        <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" alt="Nutricol Foods — Alimentos colombianos" width="185" height="62">
+        <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" alt="{{ 'Nutricol Foods — Colombian foods' if lang == 'en' else 'Nutricol Foods — Alimentos colombianos' }}" width="185" height="62">
       </a>
       <nav class="nav" id="primary-nav" aria-label="{{ 'Main navigation' if lang == 'en' else 'Navegación principal' }}">
         <a href="{{ url_for('home') }}" {% if page == 'home' %}aria-current="page"{% endif %}>{{ "Home" if lang == "en" else "Inicio" }}</a>
@@ -68,10 +68,10 @@
         <div>
           <div class="footer-title">{{ "Explore" if lang == "en" else "Explorar" }}</div>
           <ul class="footer-links">
-            <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
-            <li><a href="{{ url_for('mercados') }}">Mercados</a></li>
-            <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
-            <li><a href="{{ url_for('catalogo') }}">Catálogo</a></li>
+            <li><a href="{{ url_for('nosotros') }}">{{ "About" if lang == "en" else "Nosotros" }}</a></li>
+            <li><a href="{{ url_for('mercados') }}">{{ "Markets" if lang == "en" else "Mercados" }}</a></li>
+            <li><a href="{{ url_for('servicios') }}">{{ "Services" if lang == "en" else "Servicios" }}</a></li>
+            <li><a href="{{ url_for('catalogo') }}">{{ "Catalog" if lang == "en" else "Catálogo" }}</a></li>
           </ul>
         </div>
         <div>
@@ -97,7 +97,7 @@
     <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
       <div class="drawer-head">
         <div><span class="eyebrow orange">{{ "B2B quote" if lang == "en" else "Cotización B2B" }}</span><h2 id="drawer-title">{{ "Your selection" if lang == "en" else "Tu selección" }}</h2></div>
-        <button class="icon-button" type="button" data-close-quote aria-label="Cerrar selección">×</button>
+        <button class="icon-button" type="button" data-close-quote aria-label="{{ 'Close selection' if lang == 'en' else 'Cerrar selección' }}">×</button>
       </div>
       <div class="drawer-items" id="drawer-items" aria-live="polite"></div>
       <div class="drawer-footer" id="drawer-footer"></div>
