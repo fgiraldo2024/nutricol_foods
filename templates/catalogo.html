@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
+{% if lang == 'en' %}
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="{{ url_for('home') }}">Home</a><span>/</span> Catalog</div><h1>A pantry that <em>represents us.</em></h1><p>Explore our selection, save the products you like and discuss possibilities for your business.</p></div></section><section class="section" aria-labelledby="catalog-title"><div class="container"><div class="section-header"><div><span class="eyebrow orange">Colombian products</span><h2>Explore the <span class="display-italic">catalog.</span></h2></div><button class="btn btn-outline" type="button" data-open-quote>View my selection <span class="arrow" aria-hidden="true">↗</span></button></div><div class="catalog-note">Packaging, commercial terms and availability are discussed according to your needs. Select products to request B2B information through WhatsApp.</div><div class="catalog-toolbar"><div class="filters" role="group" aria-label="Filter products by category"><button class="filter active" type="button" data-filter="Todos" aria-pressed="true">All</button><button class="filter" type="button" data-filter="Café" aria-pressed="false">Coffee</button><button class="filter" type="button" data-filter="Cacao" aria-pressed="false">Cacao</button><button class="filter" type="button" data-filter="Miel y frutas" aria-pressed="false">Honey & fruit</button><button class="filter" type="button" data-filter="Despensa" aria-pressed="false">Pantry</button></div><span class="catalog-count" id="catalog-count">{{ products|length }} products</span></div><div class="catalog-grid" id="catalog-grid">{% for product in products %}{% include "_product_card.html" %}{% endfor %}</div></div></section><section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">Looking for something specific?</span><h2>Tell us what your <em>business needs.</em></h2></div><a class="btn btn-light" href="{{ url_for('contacto') }}">Make an inquiry <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+{% else %}
+
 <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="{{ url_for('home') }}">Inicio</a><span>/</span> Catálogo</div><h1>La despensa que <em>nos representa.</em></h1><p>Explora nuestra selección, guarda las referencias que te interesan y conversemos sobre las posibilidades para tu negocio.</p></div></section>
 <section class="section" aria-labelledby="catalog-title"><div class="container">
   <div class="section-header"><div><span class="eyebrow orange">Productos colombianos</span><h2 id="catalog-title">Explora el <span class="display-italic">catálogo.</span></h2></div><button class="btn btn-outline" type="button" data-open-quote>Ver mi selección <span class="arrow" aria-hidden="true">↗</span></button></div>
@@ -8,4 +12,6 @@
   <div class="catalog-grid" id="catalog-grid">{% for product in products %}{% include "_product_card.html" %}{% endfor %}</div>
 </div></section>
 <section class="cta-band"><div class="container cta-band-inner"><div><span class="eyebrow">¿Buscas algo específico?</span><h2>Cuéntanos qué necesita <em>tu negocio.</em></h2></div><a class="btn btn-light" href="{{ url_for('contacto') }}">Hacer una consulta <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+
+{% endif %}
 {% endblock %}

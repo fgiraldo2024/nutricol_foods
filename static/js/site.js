@@ -1,6 +1,8 @@
 (() => {
   "use strict";
   const products = JSON.parse(document.getElementById("products-data").textContent);
+  const isEnglish = document.documentElement.lang === "en";
+  const tr = (spanish, english) => isEnglish ? english : spanish;
   const byId = new Map(products.map((product) => [product.id, product]));
   const storageKey = "nutricol-quote-selection";
   let selection;
@@ -25,7 +27,7 @@
     document.querySelectorAll("[data-add-product]").forEach((button) => {
       const added = selection.includes(button.dataset.addProduct);
       button.classList.toggle("is-added", added);
-      button.innerHTML = added ? 'Agregado <span aria-hidden="true">✓</span>' : 'Agregar <span aria-hidden="true">＋</span>';
+      button.innerHTML = added ? tr("Agregado", "Added") + ' <span aria-hidden="true">✓</span>' : tr("Agregar", "Add") + ' <span aria-hidden="true">＋</span>';
       button.setAttribute("aria-pressed", String(added));
     });
     items.replaceChildren();
@@ -33,12 +35,12 @@
     if (!selection.length) {
       const empty = document.createElement("div");
       empty.className = "drawer-empty";
-      empty.innerHTML = '<span class="empty-mark" aria-hidden="true">∅</span><h3>Aún no hay productos aquí.</h3><p>Explora el catálogo y agrega las referencias que quieras consultar.</p>';
+      empty.innerHTML = '<span class="empty-mark" aria-hidden="true">∅</span><h3>' + tr("Aún no hay productos aquí.", "No products selected yet.") + '</h3><p>' + tr("Explora el catálogo y agrega las referencias que quieras consultar.", "Explore the catalog and add products you would like to ask about.") + '</p>';
       items.append(empty);
       const link = document.createElement("a");
       link.href = "/catalogo";
       link.className = "btn btn-orange";
-      link.textContent = "Explorar catálogo";
+      link.textContent = tr("Explorar catálogo", "Explore catalog");
       footer.append(link);
       return;
     }
@@ -55,20 +57,24 @@
       const remove = document.createElement("button");
       remove.type = "button";
       remove.className = "remove-item";
-      remove.textContent = "Quitar";
+      remove.textContent = tr("Quitar", "Remove");
       remove.setAttribute("aria-label", `Quitar ${product.titulo} de mi selección`);
       remove.addEventListener("click", () => { selection = selection.filter((item) => item !== id); persist(); });
       row.append(image, title, remove);
       items.append(row);
     });
     const note = document.createElement("p");
-    note.textContent = "Tu selección se incluirá en un mensaje de WhatsApp. Podrás editarlo antes de enviarlo.";
+    note.textContent = tr("Tu selección se incluirá en un mensaje de WhatsApp. Podrás editarlo antes de enviarlo.", "Your selection will be included in a WhatsApp message. You can review it before sending.");
     const link = document.createElement("a");
     link.className = "btn btn-orange";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.href = `https://wa.me/573017357829?text=${encodeURIComponent("Hola, equipo Nutricol Foods. Quisiera solicitar información y una cotización B2B de estos productos:\n\n" + selection.map((id, index) => `${index + 1}. ${byId.get(id).titulo}`).join("\n") + "\n\nMi empresa es: \nEl mercado de destino es: \nGracias.")}`;
-    link.innerHTML = 'Solicitar cotización <span class="arrow" aria-hidden="true">↗</span>';
+    const quoteIntro = tr("Hola, equipo Nutricol Foods. Quisiera solicitar información y una cotización B2B de estos productos:", "Hello, Nutricol Foods team. I would like information and a B2B quote for these products:");
+    const companyPrompt = tr("Mi empresa es:", "My company is:");
+    const marketPrompt = tr("El mercado de destino es:", "The destination market is:");
+    const thanks = tr("Gracias.", "Thank you.");
+    link.href = `https://wa.me/573017357829?text=${encodeURIComponent(quoteIntro + "\n\n" + selection.map((id, index) => `${index + 1}. ${byId.get(id).titulo}`).join("\n") + `\n\n${companyPrompt} \n${marketPrompt} \n${thanks}`)}`;
+    link.innerHTML = tr("Solicitar cotización", "Request a quote") + ' <span class="arrow" aria-hidden="true">↗</span>';
     footer.append(note, link);
   }
   function openDrawer() {
@@ -108,12 +114,12 @@
   toggle.addEventListener("click", () => {
     const open = nav.classList.toggle("open");
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    toggle.setAttribute("aria-label", open ? tr("Cerrar menú", "Close menu") : tr("Abrir menú", "Open menu"));
   });
   nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
     nav.classList.remove("open");
     toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Abrir menú");
+    toggle.setAttribute("aria-label", tr("Abrir menú", "Open menu"));
   }));
 
   const filters = document.querySelectorAll("[data-filter]");
@@ -127,7 +133,7 @@
       card.hidden = !show;
       if (show) visible += 1;
     });
-    document.getElementById("catalog-count").textContent = `${visible} ${visible === 1 ? "producto" : "productos"}`;
+    document.getElementById("catalog-count").textContent = `${visible} ${visible === 1 ? tr("producto", "product") : tr("productos", "products")}`;
   }));
 
   const form = document.getElementById("contact-form");
@@ -135,7 +141,7 @@
     event.preventDefault();
     if (!form.reportValidity()) return;
     const data = new FormData(form);
-    const message = `Hola, equipo Nutricol Foods. Quisiera conversar sobre una oportunidad comercial.\n\nNombre: ${data.get("name")}\nEmpresa: ${data.get("company")}\nCorreo: ${data.get("email")}\nTipo de negocio: ${data.get("type")}\n\nMi consulta: ${data.get("message")}`;
+    const message = `${tr("Hola, equipo Nutricol Foods. Quisiera conversar sobre una oportunidad comercial.", "Hello, Nutricol Foods team. I would like to discuss a business opportunity.")}\n\n${tr("Nombre", "Name")}: ${data.get("name")}\n${tr("Empresa", "Company")}: ${data.get("company")}\n${tr("Correo", "Email")}: ${data.get("email")}\n${tr("Tipo de negocio", "Business type")}: ${data.get("type")}\n\n${tr("Mi consulta", "My inquiry")}: ${data.get("message")}`;
     const url = `https://wa.me/573017357829?text=${encodeURIComponent(message)}`;
     const opened = window.open(url, "_blank", "noopener,noreferrer");
     if (!opened) window.location.href = url;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="{{ lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,23 +37,23 @@
   } | tojson }}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <a class="skip-link" href="#main">{{ "Skip to content" if lang == "en" else "Saltar al contenido" }}</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="{{ url_for('home') }}" aria-label="Nutricol Foods, ir al inicio">
+      <a class="brand" href="{{ url_for('home') }}" aria-label="{{ 'Nutricol Foods, go to home' if lang == 'en' else 'Nutricol Foods, ir al inicio' }}">
         <img src="{{ url_for('static', filename='img/logo_nutricol_transparent.png') }}" alt="Nutricol Foods — Alimentos colombianos" width="185" height="62">
       </a>
-      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
-        <a href="{{ url_for('home') }}" {% if page == 'home' %}aria-current="page"{% endif %}>Inicio</a>
-        <a href="{{ url_for('nosotros') }}" {% if page == 'nosotros' %}aria-current="page"{% endif %}>Nosotros</a>
-        <a href="{{ url_for('mercados') }}" {% if page == 'mercados' %}aria-current="page"{% endif %}>Mercados</a>
-        <a href="{{ url_for('servicios') }}" {% if page == 'servicios' %}aria-current="page"{% endif %}>Servicios</a>
-        <a href="{{ url_for('catalogo') }}" {% if page == 'catalogo' %}aria-current="page"{% endif %}>Catálogo</a>
-        <a href="{{ url_for('contacto') }}" {% if page == 'contacto' %}aria-current="page"{% endif %}>Contacto</a>
+      <nav class="nav" id="primary-nav" aria-label="{{ 'Main navigation' if lang == 'en' else 'Navegación principal' }}">
+        <a href="{{ url_for('home') }}" {% if page == 'home' %}aria-current="page"{% endif %}>{{ "Home" if lang == "en" else "Inicio" }}</a>
+        <a href="{{ url_for('nosotros') }}" {% if page == 'nosotros' %}aria-current="page"{% endif %}>{{ "About" if lang == "en" else "Nosotros" }}</a>
+        <a href="{{ url_for('mercados') }}" {% if page == 'mercados' %}aria-current="page"{% endif %}>{{ "Markets" if lang == "en" else "Mercados" }}</a>
+        <a href="{{ url_for('servicios') }}" {% if page == 'servicios' %}aria-current="page"{% endif %}>{{ "Services" if lang == "en" else "Servicios" }}</a>
+        <a href="{{ url_for('catalogo') }}" {% if page == 'catalogo' %}aria-current="page"{% endif %}>{{ "Catalog" if lang == "en" else "Catálogo" }}</a>
+        <a href="{{ url_for('contacto') }}" {% if page == 'contacto' %}aria-current="page"{% endif %}>{{ "Contact" if lang == "en" else "Contacto" }}</a>
       </nav>
-      <div class="header-actions">
-        <button class="header-quote" type="button" data-open-quote>Mi selección <span class="quote-count" data-quote-count>0</span></button>
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+      <div class="header-actions"><div class="language-switch" aria-label="Language"><a href="{{ url_for('set_language', lang='es') }}" {% if lang == 'es' %}aria-current="true"{% endif %}>ES</a><span>/</span><a href="{{ url_for('set_language', lang='en') }}" {% if lang == 'en' %}aria-current="true"{% endif %}>EN</a></div>
+        <button class="header-quote" type="button" data-open-quote>{{ "My selection" if lang == "en" else "Mi selección" }} <span class="quote-count" data-quote-count>0</span></button>
+        <button class="menu-toggle" type="button" aria-label="{{ 'Open menu' if lang == 'en' else 'Abrir menú' }}" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
       </div>
     </div>
   </header>
@@ -63,10 +63,10 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">Nutricol <span>Foods.</span></div>
-          <p class="footer-intro">De la despensa colombiana a nuevas oportunidades de negocio. Alimentos con origen, conexiones con futuro.</p>
+          <p class="footer-intro">{{ "From Colombia’s pantry to new business opportunities. Food with roots, connections with a future." if lang == "en" else "De la despensa colombiana a nuevas oportunidades de negocio. Alimentos con origen, conexiones con futuro." }}</p>
         </div>
         <div>
-          <div class="footer-title">Explorar</div>
+          <div class="footer-title">{{ "Explore" if lang == "en" else "Explorar" }}</div>
           <ul class="footer-links">
             <li><a href="{{ url_for('nosotros') }}">Nosotros</a></li>
             <li><a href="{{ url_for('mercados') }}">Mercados</a></li>
@@ -75,28 +75,28 @@
           </ul>
         </div>
         <div>
-          <div class="footer-title">Conectar</div>
+          <div class="footer-title">{{ "Connect" if lang == "en" else "Conectar" }}</div>
           <ul class="footer-links">
-            <li><a href="{{ url_for('contacto') }}">Contacto comercial</a></li>
+            <li><a href="{{ url_for('contacto') }}">{{ "Business contact" if lang == "en" else "Contacto comercial" }}</a></li>
             <li><a href="https://wa.me/573017357829" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
             <li><a href="https://www.instagram.com/nutricolfoodsllc/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=61580822052741" target="_blank" rel="noopener noreferrer">Facebook</a></li>
           </ul>
         </div>
         <div>
-          <div class="footer-title">Hablemos de negocios</div>
-          <p class="footer-intro">¿Buscas productos colombianos para tu mercado? Cuéntanos qué necesitas.</p>
+          <div class="footer-title">{{ "Let’s do business" if lang == "en" else "Hablemos de negocios" }}</div>
+          <p class="footer-intro">{{ "Looking for Colombian products for your market? Tell us what you need." if lang == "en" else "¿Buscas productos colombianos para tu mercado? Cuéntanos qué necesitas." }}</p>
           <a class="text-link" href="https://wa.me/573017357829" target="_blank" rel="noopener noreferrer">+57 301 735 7829 <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <div class="footer-bottom"><span>© {{ current_year }} Nutricol Foods. Alimentos colombianos.</span><span>Origen en Antioquia, Colombia.</span></div>
+      <div class="footer-bottom"><span>© {{ current_year }} Nutricol Foods. {{ "Colombian foods." if lang == "en" else "Alimentos colombianos." }}</span><span>{{ "Rooted in Antioquia, Colombia." if lang == "en" else "Origen en Antioquia, Colombia." }}</span></div>
     </div>
   </footer>
   <div class="quote-drawer" id="quote-drawer" aria-hidden="true">
-    <button class="drawer-backdrop" type="button" data-close-quote aria-label="Cerrar selección"></button>
+    <button class="drawer-backdrop" type="button" data-close-quote aria-label="{{ 'Close selection' if lang == 'en' else 'Cerrar selección' }}"></button>
     <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1">
       <div class="drawer-head">
-        <div><span class="eyebrow orange">Cotización B2B</span><h2 id="drawer-title">Tu selección</h2></div>
+        <div><span class="eyebrow orange">{{ "B2B quote" if lang == "en" else "Cotización B2B" }}</span><h2 id="drawer-title">{{ "Your selection" if lang == "en" else "Tu selección" }}</h2></div>
         <button class="icon-button" type="button" data-close-quote aria-label="Cerrar selección">×</button>
       </div>
       <div class="drawer-items" id="drawer-items" aria-live="polite"></div>

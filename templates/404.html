@@ -1,4 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+{% if lang == 'en' %}
+<section class="not-found"><div class="container"><span aria-hidden="true">404</span><h1>This path doesn’t lead <em>there.</em></h1><p>The page you’re looking for is unavailable. There is still plenty of Colombia to discover.</p><a class="btn btn-orange" href="{{ url_for('home') }}">Back to home <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+{% else %}
+
 <section class="not-found"><div class="container"><span aria-hidden="true">404</span><h1>Este camino no lleva <em>allí.</em></h1><p>La página que buscas no está disponible. Pero todavía hay mucho de Colombia por descubrir.</p><a class="btn btn-orange" href="{{ url_for('home') }}">Volver al inicio <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+
+{% endif %}
 {% endblock %}
